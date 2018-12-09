@@ -19,22 +19,22 @@ public class PlayerMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //anim = GetComponent<Animator>();
-        //anim.SetFloat("y", 0f);
-        //anim.SetFloat("x", 0f);
+        anim = GetComponent<Animator>();
+        anim.SetFloat("y", 0f);
+        anim.SetFloat("x", 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //xaxis = Input.GetAxis("Horizontal");
-        //yaxis = Input.GetAxis("Vertical");
+        xaxis = Input.GetAxis("Horizontal");
+        yaxis = Input.GetAxis("Vertical");
 
 
         Robot = GameObject.FindGameObjectWithTag("Player");
-        //Robot.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, 0f, 0f);
-        //anim.SetFloat("x", xaxis);
-        //anim.SetFloat("y", yaxis);
+        Robot.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, 0f, 0f);
+        anim.SetFloat("x", xaxis);
+        anim.SetFloat("y", yaxis);
 
         //if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         //{
